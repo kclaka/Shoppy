@@ -38,7 +38,13 @@
                                 <a href="/delete/197"><input type="button" class="btn" name="delete" value="X" style="float: left;"></a>
                             </td>
                             <td>
-                                <a href="/decrement/197"><input type="button" class="btnD" name="decrement" value="-" ></a>
+                                <form action="{{url_for('delete', item = item.id)}}" method="post">
+                                    <button type="button" class="btnD" name="decrement" value="-"></button>
+                                </form>
+                                <form action="{{url_for('delete', item = item.id)}}" method="post">
+                                    <button name = "button" class="btnI" name="increment" value="+"></button>
+                                </form>
+
                                 {{item['item_qty']}}
                                 <a href="/increment/197"><input type="button" class="btnI" name="increment" value="+"></a>
                             </td>
