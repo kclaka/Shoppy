@@ -11,7 +11,7 @@ firebase_request_adapter = requests.Request()
 app = Flask(__name__)
 
 
-@app.route('/')
+@app.route('/', methods=['GET', 'POST'])
 def root():
     id_token = request.cookies.get("token")
     error_message = None
@@ -31,41 +31,40 @@ def root():
         items = fetch_times(claims['email'])
 
     if request.method == 'GET':
-        return render_template('index.html', user = claims, error_message=error_message, items=items)
+        return render_template('index.html', user=claims, error_message=error_message, items=items)
     elif request.method == 'POST':
-        item_name = request.form['shop-item']
-        item_no = request.form['item-no']
-        store_item(claims['email'], datetime.datetime.now(), item_name)
+        name = request.form['name']
+        qty = request.form['qty']
+        store_item(claims['email'], datetime.datetime.now(), name, qty)
         return redirect(url_for('root'))
 
 
-@app.route('/test')
-def test():
-    store_item(datetime.datetime.now())
-
-    times = fetch_times(10)
-    return render_template('test.html', times=times)
-
-
-def store_item(email, dt, item_name, item_no):
+def store_item(email, dt, name, qty):
     entity = datastore.Entity(key=datastore_client.key('User', email, 'visit'))
     entity.update({
         'timestamp': dt,
-        'item_name': item_name,
-        'item_no': item_no
+        'item_name': name,
+        'item_qty': qty
 
     })
 
     datastore_client.put(entity)
 
 
-def fetch_times(limit):
-    query = datastore_client.query(kind='visit')
+def fetch_times(email):
+    ancestor = datastore_client.key('User', email)
+    query = datastore_client.query(kind='visit', ancestor=ancestor)
     query.order = ['-timestamp']
 
-    times = query.fetch(limit=limit)
+    items = query.fetch()
 
-    return times
+    return items
+
+
+def delete_item(user, email, entity, item_id, element):
+    key = datastore_client.key(user, email, entity, item_id)
+    datastore_client.delete(key)
+    flash('%s successfully deleted' % element, 'deleted')
 
 
 if __name__ == '__main__':
