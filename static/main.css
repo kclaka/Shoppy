@@ -1,11 +1,131 @@
-html,
-body {
-    height: 100%;
+
+body { 
+  background: url("https://www.xmple.com/wallpaper/linear-gradient-orange-yellow-5120x2880-c2-ff8c00-ffd700-a-315-f-14.svg"); 
+  background-repeat: repeat;
+  background-attachment: scroll;
+  
 }
 
-    .container {
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
+img{
+  max-width: 4%;
 }
+
+#name,#qty{
+  text-align: left;
+  border: 2px solid black;
+  border-radius: 4px;
+  font-size:20px;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; font-weight: 300;
+  padding:10px;
+}
+
+p {
+  font-family: 'Caveat Brush';font-size: 40px;
+}
+
+#subm{
+  text-align: left;
+  border: 2px solid black;
+  border-radius: 4px;
+  font-size:20px;font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; font-weight: 300;
+  padding:10px;
+  width: 1.1in;
+}
+
+#subm {
+  background-image: url("https://b.kisscc0.com/20180705/eiw/kisscc0-shopping-cart-computer-icons-online-shopping-shopping-cart-5b3dd50d1dee64.2180399715307788931226.png");
+  background-position: right top;
+  background-repeat: no-repeat;
+  background-size: contain;
+  box-shadow: 4px 4px 2px rgba(0, 0, 0, 0.3);
+}
+
+.btnD {
+  text-align: left;
+  border: 2px solid black;
+  border-radius: 4px;
+  font-size:20px;font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  padding:10px;
+}
+
+.btnD:hover{
+  background-color: darkgray;
+}
+
+.btnI {
+  border: 2px solid black;
+  border-radius: 4px;
+  font-size:20px;font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+  font-weight: 300;
+  padding:10px;
+}
+
+.btnI:hover{
+  background-color: darkgray;
+}
+
+tr:nth-child(even) {background-color: #FAC999;}
+
+.selected {
+  text-decoration: line-through;
+}
+.unselected{
+  text-decoration: none;
+}
+
+.head {
+  background-color: orange;
+}
+
+.subm:hover{
+  background-color: darkgray;
+}
+
+h1 {
+  background-image: url("");
+}
+
+table {
+  font-size: 26px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  table-layout: fixed;
+  width: 70%; 
+  border-collapse: collapse;
+}
+
+table.center {
+  margin-left:auto; 
+  margin-right:auto;
+}
+
+table, th, td {
+  border: 3px solid black;
+  border-left: none;
+  border-right: none;
+}
+
+td {
+  display: table-cell;
+  
+}
+
+.content{
+  text-align: center;
+  background-color: transparent;
+  
+  
+}
+
+.btn {
+  display:block;
+  border-radius: 50%;
+  color: black;
+  border: 1.1px solid black;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.29);
+}
+
+.btn:hover{
+    background:red;
+}
+
