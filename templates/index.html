@@ -51,7 +51,7 @@
                         {% endif %}
                     {% endwith %}
 
-                    {% if items %}
+                    {% if items|length > 0  %}
                         <table class="table table-hover table-dark">
                             <tr>
                                 <th>Item name</th>
@@ -75,7 +75,7 @@
                             <a href="/delete_all/" class="btn btn-danger btn-xs"
                                                onclick="return confirm('Are you sure you want to delete ALL ITEMS ?')">Delete all Items</a>
                     {% else %}
-                        <p align="center">Your Shopping List is Empty! Add Items to your Shopping List</p>
+                        <p align="center">There is nothing to buy for now.</p>
                     {% endif %}
 
                 </div>
@@ -97,7 +97,6 @@
             Error: {{ error_message }}
         {% endif %}
         <a href="/logout" id="sign-out" class="btn btn btn-info btn-xs">Sign Out</a>
-        if that's not you!
         </span>
     </div>
 {% endblock %}

@@ -29,6 +29,7 @@ def root():
 
     if claims:
         items = fetch_times(claims['email'])
+        items = list(items)
 
     if request.method == 'GET':
         return render_template('index.html', user=claims, error_message=error_message, items=items)
