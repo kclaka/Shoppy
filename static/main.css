@@ -82,20 +82,18 @@ tr:nth-child(even) {background-color: #FAC999;}
   background-color: darkgray;
 }
 
-h1 {
-  background-image: url("");
-}
+
 
 table {
   font-size: 26px;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   table-layout: fixed;
-  width: 70%; 
+  width: 70%;
   border-collapse: collapse;
 }
 
 table.center {
-  margin-left:auto; 
+  margin-left:auto;
   margin-right:auto;
 }
 
@@ -107,14 +105,14 @@ table, th, td {
 
 td {
   display: table-cell;
-  
+
 }
 
 .content{
   text-align: center;
   background-color: transparent;
-  
-  
+
+
 }
 
 .btn {

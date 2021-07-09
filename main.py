@@ -36,6 +36,7 @@ def root():
         name = request.form['name']
         qty = request.form['qty']
         store_item(claims['email'], datetime.datetime.now(), name, qty)
+        flash("Shopping Item inserted successfully")
         return redirect(url_for('root'))
 
 
@@ -51,7 +52,7 @@ def store_item(email, dt, name, qty):
     datastore_client.put(entity)
 
 
-@app.route('/delete/<int:item>/', methods=['POST'])
+@app.route('/delete/<int:item>/', methods=['GET', 'POST'])
 def delete(item):
     claims, error_message = auth()
 
@@ -60,13 +61,18 @@ def delete(item):
     return redirect(url_for('root'))
 
 
-@app.route('/delete_all/', methods=['POST'])
+@app.route('/delete_all/', methods=['GET', 'POST'])
 def delete_all():
     claims, error_message = auth()
     if claims:
         items = fetch_times(claims['email'])
         for item in items:
-            delete_item('User', claims['email'], 'visit', item.id, 'Shopping List')
+            delete_item('User', claims['email'], 'visit', item.id, 'Shopping Ite,')
+    return redirect(url_for('root'))
+
+
+@app.route('/logout', methods=['GET', 'POST'])
+def logout():
     return redirect(url_for('root'))
 
 
