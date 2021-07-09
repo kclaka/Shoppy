@@ -37,7 +37,7 @@ def root():
         name = request.form['name']
         qty = request.form['qty']
         store_item(claims['email'], datetime.datetime.now(), name, qty)
-        flash("Shopping Item inserted successfully")
+        flash('%s successfully added' % name, 'added')
         return redirect(url_for('root'))
 
 
@@ -68,7 +68,7 @@ def delete_all():
     if claims:
         items = fetch_times(claims['email'])
         for item in items:
-            delete_item('User', claims['email'], 'visit', item.id, 'Shopping Ite,')
+            delete_item('User', claims['email'], 'visit', item.id, item['item_name'])
     return redirect(url_for('root'))
 
 
