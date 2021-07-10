@@ -38,3 +38,11 @@ Visit your new project url:
 ```
 gcloud app browse
 ```
+
+### Web App Features :point_down:
+
+- [x] User is able to add an item to the shopping list
+- [x] User is able to view their whole shopping list
+- [x] User is able to delete an individual item from the shopping list
+- [x] User is able to delete their entire shopping list, with a single button click (without going and deleting each individual item one by one) 
+- [x] Each is able to login with their Google account and their shopping list must persist between their logins
