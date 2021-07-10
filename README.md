@@ -16,10 +16,10 @@ projects with Flask previously. I also didn't want to deal with Javascript :laug
 a cloud app. I am glad I did because I learned (and failed :sob:) so much!</p>
 </div>
 
-Resources Used:
+Resources Used:<br>
 <a href="https://cloud.google.com/appengine/docs/standard/python3/building-app">Building a Python 3 App on App Engine</a><br>
-<a href="https://flask.palletsprojects.com/en/1.0.x/quickstart/#">Flask Quick Start</a>
-
+<a href="https://flask.palletsprojects.com/en/1.0.x/quickstart/#">Flask Quick Start</a><br>
+<a href="https://cloud.google.com/datastore/docs/concepts/entities">Entities, Properties, and Keys</a>
 ### Design :
 
 ![image](https://storage.googleapis.com/gweb-cloudblog-publish/images/firebase-aunthentication0s8a.max-700x700.PNG)
