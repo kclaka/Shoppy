@@ -46,3 +46,12 @@ gcloud app browse
 - [x] User is able to delete an individual item from the shopping list
 - [x] User is able to delete their entire shopping list, with a single button click (without going and deleting each individual item one by one) 
 - [x] Each is able to login with their Google account and their shopping list must persist between their logins
+- [x] And so much more ... :blush: 
+
+
+### Upcoming Features :hourglass_flowing_sand:
+- [ ] Improve design for better user experience
+- [ ] Add more authentication methods
+- [ ] Enable user to add shopping list without login but will have to login to save
+- [ ] Automatic price look up for items in shopping list
+- [ ] One Click button to purchase all items in shopping list from user favorite store
