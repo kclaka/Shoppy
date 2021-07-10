@@ -1,6 +1,24 @@
 # Shopping List Web App
 
-### WebApp URL : https://poetic-chariot-319022.uc.r.appspot.com/
+### WebApp URL : https://poetic-chariot-319022.uc.r.appspot.com
+
+### About Project:
+<div>
+<p>I picked the Shopping App project over the Game project
+because I saw it as an opportunity to explore building a serverless
+project.</p>
+<p>After I received the project details I spent some time to think
+about the design and what technologies to use. I picked Flask
+because I had a fair knowledge of python and I have done some little
+projects with Flask previously. I also didn't want to deal with Javascript :laughing: </p>
+
+<p>I opted for a serverless architecture so I could some experience building
+a cloud app. I am glad I did because I learned (and failed :sob:) so much!</p>
+</div>
+
+Resources Used:
+<a href="https://cloud.google.com/appengine/docs/standard/python3/building-app">Building a Python 3 App on App Engine</a><br>
+<a href="https://flask.palletsprojects.com/en/1.0.x/quickstart/#">Flask Quick Start</a>
 
 ### Design :
 
