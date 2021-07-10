@@ -39,6 +39,19 @@ Visit your new project url:
 gcloud app browse
 ```
 
+### Teck Stack :hammer:
+- FrontEnd
+    - HTML/CSS
+    - Bootstrap
+    
+
+- BackEnd
+    - Flask
+    - Google Cloud App Engine
+    - FireStore
+    - Google Cloud Data Store
+
+
 ### Web App Features :point_down:
 
 - [x] User is able to add an item to the shopping list
