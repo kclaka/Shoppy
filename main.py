@@ -41,18 +41,6 @@ def root():
         return redirect(url_for('root'))
 
 
-def store_item(email, dt, name, qty):
-    entity = datastore.Entity(key=datastore_client.key('User', email, 'visit'))
-    entity.update({
-        'timestamp': dt,
-        'item_name': name,
-        'item_qty': qty
-
-    })
-
-    datastore_client.put(entity)
-
-
 @app.route('/delete/<int:item>/', methods=['GET', 'POST'])
 def delete(item):
     claims, error_message = auth()
@@ -87,6 +75,18 @@ def fetch_times(email):
     return items
 
 
+def store_item(email, dt, name, qty):
+    entity = datastore.Entity(key=datastore_client.key('User', email, 'visit'))
+    entity.update({
+        'timestamp': dt,
+        'item_name': name,
+        'item_qty': qty
+
+    })
+
+    datastore_client.put(entity)
+
+
 def delete_item(user, email, entity, item_id, element):
     key = datastore_client.key(user, email, entity, item_id)
     datastore_client.delete(key)
@@ -108,14 +108,6 @@ def auth():
             error_message = str(exc)
 
     return claims, error_message
-
-
-@app.context_processor
-def utility_functions():
-    def print_in_console(message):
-        print(str(message))
-
-    return dict(mdebug=print_in_console)
 
 
 if __name__ == '__main__':
