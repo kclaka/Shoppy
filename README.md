@@ -19,7 +19,10 @@ a cloud app. I am glad I did because I learned (and failed :sob:) so much!</p>
 Resources Used:<br>
 <a href="https://cloud.google.com/appengine/docs/standard/python3/building-app">Building a Python 3 App on App Engine</a><br>
 <a href="https://flask.palletsprojects.com/en/1.0.x/quickstart/#">Flask Quick Start</a><br>
-<a href="https://cloud.google.com/datastore/docs/concepts/entities">Entities, Properties, and Keys</a>
+<a href="https://cloud.google.com/datastore/docs/concepts/entities">Entities, Properties, and Keys</a><br>
+<a href="#">...Lots of Googling and Youtube Videos</a>
+
+<br>
 ### Design :
 
 ![image](https://storage.googleapis.com/gweb-cloudblog-publish/images/firebase-aunthentication0s8a.max-700x700.PNG)
