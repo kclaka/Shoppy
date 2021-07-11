@@ -23,6 +23,7 @@ Resources Used:<br>
 <a href="#">...Lots of Googling and Youtube Videos</a>
 
 <br>
+
 ### Design :
 
 ![image](https://storage.googleapis.com/gweb-cloudblog-publish/images/firebase-aunthentication0s8a.max-700x700.PNG)
