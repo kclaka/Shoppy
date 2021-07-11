@@ -14,6 +14,10 @@ app.secret_key = 'fsdfsdfowe2323r'
 
 @app.route('/', methods=['GET', 'POST'])
 def root():
+    """
+    Driver method, handles Fetch, GET and POST.
+    :return:
+    """
     id_token = request.cookies.get("token")
     claims, error_message = auth()
     items = None
