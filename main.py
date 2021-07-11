@@ -43,6 +43,11 @@ def root():
 
 @app.route('/delete/<int:item>/', methods=['GET', 'POST'])
 def delete(item):
+    """
+    Deletes a single Item from the Database
+    :param item:
+    :return:
+    """
     claims, error_message = auth()
 
     if claims:
@@ -52,6 +57,10 @@ def delete(item):
 
 @app.route('/delete_all/', methods=['GET', 'POST'])
 def delete_all():
+    """
+    Deletes all items from the database
+    :return:
+    """
     claims, error_message = auth()
     if claims:
         items = fetch_times(claims['email'])
@@ -66,6 +75,11 @@ def logout():
 
 
 def fetch_times(email):
+    """
+    Fetch all items from the database using User email as filter and order the items by time
+    :param email:
+    :return:
+    """
     ancestor = datastore_client.key('User', email)
     query = datastore_client.query(kind='visit', ancestor=ancestor)
     query.order = ['-timestamp']
@@ -76,6 +90,14 @@ def fetch_times(email):
 
 
 def store_item(email, dt, name, qty):
+    """
+    Save Shopping items to the data base
+    :param email:
+    :param dt:
+    :param name:
+    :param qty:
+    :return:
+    """
     entity = datastore.Entity(key=datastore_client.key('User', email, 'visit'))
     entity.update({
         'timestamp': dt,
@@ -88,12 +110,25 @@ def store_item(email, dt, name, qty):
 
 
 def delete_item(user, email, entity, item_id, element):
+    """
+    Helper Function to delete specific item from the data store
+    :param user:
+    :param email:
+    :param entity:
+    :param item_id:
+    :param element:
+    :return:
+    """
     key = datastore_client.key(user, email, entity, item_id)
     datastore_client.delete(key)
     flash('%s successfully deleted' % element, 'deleted')
 
 
 def auth():
+    """
+    Retrieve, verify, and decrypt the firebase token
+    :return:
+    """
     id_token = request.cookies.get("token")
     error_message = None
     claims = None

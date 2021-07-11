@@ -81,6 +81,7 @@ gcloud app browse
 
 
 ### Upcoming Features :hourglass_flowing_sand:
+- [ ] Cache results in an encrypted cache results in an encrypted session store
 - [ ] Improve design for better user experience
 - [ ] Add more authentication methods
 - [ ] Enable user to add shopping list without login but will have to login to save
