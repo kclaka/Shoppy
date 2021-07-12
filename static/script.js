@@ -1,3 +1,7 @@
+/*
+Most of this code is from Google Documentation
+ */
+
 'use strict';
 
 window.addEventListener('load', function () {
