@@ -4,13 +4,7 @@
 
 ### About Project:
 <div>
-<p>I picked the Shopping App project over the Game project
-because I saw it as an opportunity to explore building a serverless
-project.</p>
-<p>After I received the project details I spent some time to think
-about the design and what technologies to use. I picked Flask
-because I had a fair knowledge of python and I have done some little
-projects with Flask previously. I also didn't want to deal with Javascript :laughing: </p>
+<p>Simple fully functional shopping web app with authentication.</p>
 
 <p>I opted for a serverless architecture so I could some experience building
 a cloud app. I am glad I did because I learned (and failed :sob:) so much!</p>
